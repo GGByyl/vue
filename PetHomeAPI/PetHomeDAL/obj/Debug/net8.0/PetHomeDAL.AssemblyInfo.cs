@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PetHomeDAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+accb4dcc40acdc30fdd38cb1c0a5719df15a6627")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c91ccd8669e3a68017905daef668ed403f3c1fdf")]
 [assembly: System.Reflection.AssemblyProductAttribute("PetHomeDAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PetHomeDAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
