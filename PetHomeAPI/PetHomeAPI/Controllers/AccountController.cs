@@ -26,7 +26,22 @@ namespace PetHomeAPI.Controllers
                 msg = res.Message
             });
         }
+        /// <summary>
+        /// 注册
+        /// </summary>
+        [HttpPost]
+        public IActionResult Add_Account([FromBody] AddAccount_DTO model)
+        {
+            Response_DTO<Account> res = accountSerivce.Add_Account(model);
 
+            return new JsonResult(new
+            {
+                mode = res.StatuCode,
+                msg = res.Message,
+
+
+            });
+        }
 
 
         /// <summary>

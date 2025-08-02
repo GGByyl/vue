@@ -49,6 +49,37 @@
         }
       }
     },
+    "/api/Account/Add_Account": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddAccount_DTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddAccount_DTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddAccount_DTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Account/AccountModify": {
       "post": {
         "tags": [
@@ -102,6 +133,90 @@
         }
       }
     },
+    "/api/Commodity/AddCommdity": {
+      "post": {
+        "tags": [
+          "Commodity"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommodityAdd_DTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommodityAdd_DTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommodityAdd_DTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Commodity/UpdataCommdity": {
+      "post": {
+        "tags": [
+          "Commodity"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommodityUpdata_DTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommodityUpdata_DTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CommodityUpdata_DTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Commodity/DeleteCommodity": {
+      "delete": {
+        "tags": [
+          "Commodity"
+        ],
+        "parameters": [
+          {
+            "name": "cid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Login/Login": {
       "post": {
         "tags": [
@@ -133,26 +248,26 @@
         }
       }
     },
-    "/api/Login/Add_Account": {
+    "/api/Order/AddOrder": {
       "post": {
         "tags": [
-          "Login"
+          "Order"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddAccount_DTO"
+                "$ref": "#/components/schemas/OrderAdd_DTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddAccount_DTO"
+                "$ref": "#/components/schemas/OrderAdd_DTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/AddAccount_DTO"
+                "$ref": "#/components/schemas/OrderAdd_DTO"
               }
             }
           }
@@ -160,45 +275,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "GetWeatherForecast",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -244,6 +320,80 @@
           "admins": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CommodityAdd_DTO": {
+        "type": "object",
+        "properties": {
+          "cname": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "inventory": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "describe": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufactureTiem": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "yieldly": {
+            "type": "string",
+            "nullable": true
+          },
+          "expiration": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "salesVolume": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateIssued": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CommodityUpdata_DTO": {
+        "type": "object",
+        "properties": {
+          "cid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cname": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "inventory": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "describe": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateIssued": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -308,25 +458,46 @@
         },
         "additionalProperties": false
       },
-      "WeatherForecast": {
+      "OrderAdd_DTO": {
         "type": "object",
         "properties": {
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "temperatureC": {
+          "orderUserId": {
             "type": "integer",
             "format": "int32"
           },
-          "temperatureF": {
+          "orderGoodsId": {
             "type": "integer",
-            "format": "int32",
-            "readOnly": true
+            "format": "int32"
           },
-          "summary": {
+          "orderSite": {
             "type": "string",
             "nullable": true
+          },
+          "orderState": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "principal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPrices": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "unitPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "orderTime": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false

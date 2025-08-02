@@ -33,6 +33,22 @@
   },
   {
     "ContainingType": "PetHomeAPI.Controllers.AccountController",
+    "Method": "Add_Account",
+    "RelativePath": "api/Account/Add_Account",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Models.DTO.AddAccount_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetHomeAPI.Controllers.AccountController",
     "Method": "GetAcc",
     "RelativePath": "api/Account/GetAcc",
     "HttpMethod": "GET",
@@ -63,16 +79,48 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PetHomeAPI.Controllers.LoginController",
-    "Method": "Add_Account",
-    "RelativePath": "api/Login/Add_Account",
+    "ContainingType": "PetHomeAPI.Controllers.CommodityController",
+    "Method": "AddCommdity",
+    "RelativePath": "api/Commodity/AddCommdity",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "model",
-        "Type": "Models.DTO.AddAccount_DTO",
+        "Type": "Models.DTO.CommodityAdd_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetHomeAPI.Controllers.CommodityController",
+    "Method": "DeleteCommodity",
+    "RelativePath": "api/Commodity/DeleteCommodity",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetHomeAPI.Controllers.CommodityController",
+    "Method": "UpdataCommdity",
+    "RelativePath": "api/Commodity/UpdataCommdity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Models.DTO.CommodityUpdata_DTO",
         "IsRequired": true
       }
     ],
@@ -95,24 +143,19 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PetHomeAPI.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
+    "ContainingType": "PetHomeAPI.Controllers.OrderController",
+    "Method": "AddOrder",
+    "RelativePath": "api/Order/AddOrder",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[PetHomeAPI.WeatherForecast, PetHomeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "model",
+        "Type": "Models.DTO.OrderAdd_DTO",
+        "IsRequired": true
       }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": []
   }
 ]

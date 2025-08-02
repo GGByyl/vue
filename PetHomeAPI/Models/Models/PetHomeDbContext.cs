@@ -109,7 +109,7 @@ public partial class PetHomeDbContext : DbContext
 
         modelBuilder.Entity<Commodity>(entity =>
         {
-            entity.HasKey(e => e.Cid).HasName("PK__Commodit__C1F8DC59D002A957");
+            entity.HasKey(e => e.Cid).HasName("PK__Commodit__C1F8DC5985EC246A");
 
             entity.ToTable("Commodity");
 
@@ -117,20 +117,24 @@ public partial class PetHomeDbContext : DbContext
             entity.Property(e => e.Cname)
                 .HasMaxLength(50)
                 .HasColumnName("CName");
+            entity.Property(e => e.DateIssued).HasColumnType("datetime");
             entity.Property(e => e.Describe).HasMaxLength(200);
+            entity.Property(e => e.ManufactureTiem).HasColumnType("datetime");
             entity.Property(e => e.Price).HasColumnType("decimal(18, 0)");
             entity.Property(e => e.Yieldly).HasMaxLength(100);
         });
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderId).HasName("PK__Orders__C3905BAF005CBD5A");
+            entity.HasKey(e => e.OrderNumber).HasName("PK__Orders__CAC5E742B61456BE");
 
-            entity.Property(e => e.OrderId).HasColumnName("OrderID");
+            entity.Property(e => e.OrderNumber).HasMaxLength(200);
             entity.Property(e => e.OrderGoodsId).HasColumnName("OrderGoodsID");
             entity.Property(e => e.OrderSite).HasMaxLength(200);
+            entity.Property(e => e.OrderTime).HasColumnType("datetime");
             entity.Property(e => e.OrderUserId).HasColumnName("OrderUserID");
             entity.Property(e => e.TotalPrices).HasColumnType("decimal(18, 0)");
+            entity.Property(e => e.UnitPrice).HasColumnType("decimal(18, 0)");
         });
 
         modelBuilder.Entity<OrderType>(entity =>

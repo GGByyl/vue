@@ -15,7 +15,7 @@ public partial class Commodity
 
     public string? Describe { get; set; }
 
-    public DateOnly ManufactureTiem { get; set; }
+    public DateTime ManufactureTiem { get; set; }
 
     public string Yieldly { get; set; } = null!;
 
@@ -23,5 +23,5 @@ public partial class Commodity
 
     public int SalesVolume { get; set; }
 
-    public DateOnly DateIssued { get; set; }
+    public DateTime? DateIssued { get; set; }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\学校的东西\\vueapi\\PetHomeAPI\\PetHomeDAL\\PetHomeDAL.csproj": {}
+    "C:\\Users\\GGB\\Source\\Repos\\vue\\PetHomeAPI\\PetHomeDAL\\PetHomeDAL.csproj": {}
   },
   "projects": {
-    "D:\\学校的东西\\vueapi\\PetHomeAPI\\Models\\Models.csproj": {
+    "C:\\Users\\GGB\\Source\\Repos\\vue\\PetHomeAPI\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\学校的东西\\vueapi\\PetHomeAPI\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\GGB\\Source\\Repos\\vue\\PetHomeAPI\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "D:\\学校的东西\\vueapi\\PetHomeAPI\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\chen9\\.nuget\\packages\\",
-        "outputPath": "D:\\学校的东西\\vueapi\\PetHomeAPI\\Models\\obj\\",
+        "projectPath": "C:\\Users\\GGB\\Source\\Repos\\vue\\PetHomeAPI\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\GGB\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\GGB\\Source\\Repos\\vue\\PetHomeAPI\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\chen9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GGB\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -81,20 +81,20 @@
         }
       }
     },
-    "D:\\学校的东西\\vueapi\\PetHomeAPI\\PetHomeDAL\\PetHomeDAL.csproj": {
+    "C:\\Users\\GGB\\Source\\Repos\\vue\\PetHomeAPI\\PetHomeDAL\\PetHomeDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\学校的东西\\vueapi\\PetHomeAPI\\PetHomeDAL\\PetHomeDAL.csproj",
+        "projectUniqueName": "C:\\Users\\GGB\\Source\\Repos\\vue\\PetHomeAPI\\PetHomeDAL\\PetHomeDAL.csproj",
         "projectName": "PetHomeDAL",
-        "projectPath": "D:\\学校的东西\\vueapi\\PetHomeAPI\\PetHomeDAL\\PetHomeDAL.csproj",
-        "packagesPath": "C:\\Users\\chen9\\.nuget\\packages\\",
-        "outputPath": "D:\\学校的东西\\vueapi\\PetHomeAPI\\PetHomeDAL\\obj\\",
+        "projectPath": "C:\\Users\\GGB\\Source\\Repos\\vue\\PetHomeAPI\\PetHomeDAL\\PetHomeDAL.csproj",
+        "packagesPath": "C:\\Users\\GGB\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\GGB\\Source\\Repos\\vue\\PetHomeAPI\\PetHomeDAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\chen9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GGB\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -109,8 +109,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\学校的东西\\vueapi\\PetHomeAPI\\Models\\Models.csproj": {
-                "projectPath": "D:\\学校的东西\\vueapi\\PetHomeAPI\\Models\\Models.csproj"
+              "C:\\Users\\GGB\\Source\\Repos\\vue\\PetHomeAPI\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\GGB\\Source\\Repos\\vue\\PetHomeAPI\\Models\\Models.csproj"
               }
             }
           }

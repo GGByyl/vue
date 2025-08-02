@@ -5,7 +5,7 @@ namespace Models.Models;
 
 public partial class Order
 {
-    public int OrderId { get; set; }
+    public string OrderNumber { get; set; } = null!;
 
     public int OrderUserId { get; set; }
 
@@ -20,4 +20,8 @@ public partial class Order
     public decimal? TotalPrices { get; set; }
 
     public int? Quantity { get; set; }
+
+    public decimal UnitPrice { get; set; }
+
+    public DateTime OrderTime { get; set; }
 }
