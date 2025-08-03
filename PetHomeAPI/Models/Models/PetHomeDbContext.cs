@@ -21,6 +21,8 @@ public partial class PetHomeDbContext : DbContext
 
     public virtual DbSet<Appoint> Appoints { get; set; }
 
+    public virtual DbSet<AppointManger> AppointMangers { get; set; }
+
     public virtual DbSet<AppointState> AppointStates { get; set; }
 
     public virtual DbSet<Collect> Collects { get; set; }
@@ -75,15 +77,30 @@ public partial class PetHomeDbContext : DbContext
 
         modelBuilder.Entity<Appoint>(entity =>
         {
-            entity.HasKey(e => e.Aid).HasName("PK__Appoint__C69007C8DB4D2E58");
+            entity.HasKey(e => e.Aid).HasName("PK__Appoint__C69007C8A26C8901");
 
             entity.ToTable("Appoint");
 
             entity.Property(e => e.Aid).HasColumnName("AID");
+            entity.Property(e => e.Amid).HasColumnName("AMID");
             entity.Property(e => e.Astate).HasColumnName("AState");
-            entity.Property(e => e.Atime).HasColumnName("ATime");
+            entity.Property(e => e.Atime)
+                .HasColumnType("datetime")
+                .HasColumnName("ATime");
             entity.Property(e => e.Atype).HasColumnName("AType");
             entity.Property(e => e.Auid).HasColumnName("AUID");
+        });
+
+        modelBuilder.Entity<AppointManger>(entity =>
+        {
+            entity.HasKey(e => e.Amid).HasName("PK__AppointM__4272DD748CD1E149");
+
+            entity.ToTable("AppointManger");
+
+            entity.Property(e => e.Amid).HasColumnName("AMID");
+            entity.Property(e => e.Amname)
+                .HasMaxLength(100)
+                .HasColumnName("AMName");
         });
 
         modelBuilder.Entity<AppointState>(entity =>

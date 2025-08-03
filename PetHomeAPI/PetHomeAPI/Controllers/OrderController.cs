@@ -23,5 +23,31 @@ namespace PetHomeAPI.Controllers
                 msg = res.Message
             });
         }
+        /// <summary>
+        /// 修改订单信息
+        /// </summary>
+        [HttpPost]
+        public IActionResult UpdataOrder(OrderUpdata_DTO model)
+        {
+            Response_DTO<string> res = orderService.UpdataOrder(model);
+            return new JsonResult(new
+            {
+                stu = res.StatuCode,
+                msg = res.Message
+            });
+        }
+        /// <summary>
+        /// 删除订单信息
+        /// </summary>
+        [HttpDelete]
+        public IActionResult DeleteOrder(string orderNumber)
+        {
+            Response_DTO<string> res = orderService.DeleteOrder(orderNumber);
+            return new JsonResult(new
+            {
+                stu = res.StatuCode,
+                msg = res.Message
+            });
+        }
     }
 }

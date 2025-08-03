@@ -11,9 +11,9 @@ public partial class Appoint
 
     public int Astate { get; set; }
 
-    public int Principal { get; set; }
+    public int Amid { get; set; }
 
-    public DateOnly Atime { get; set; }
+    public DateTime Atime { get; set; }
 
     public int Atype { get; set; }
 }

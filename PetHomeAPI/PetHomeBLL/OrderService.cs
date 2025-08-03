@@ -102,5 +102,75 @@ namespace PetHomeBLL
                 return res;
             }
         }
+        /// <summary>
+        /// 修改订单信息
+        /// </summary>
+        public Response_DTO<string> UpdataOrder(OrderUpdata_DTO model)
+        {
+            Response_DTO<string> res = new Response_DTO<string>();
+            if (string.IsNullOrEmpty(model.OrderSite))
+            {
+                res.StatuCode = 405;
+                res.Message = "请输入收货地址";
+                return res;
+            }
+            if (model.OrderState <=0)
+            {
+                res.StatuCode = 405;
+                res.Message = "请输入订单状态";
+                return res;
+            }
+            int sum = orderDAL.UpdataOrder(model);
+            if (sum == 200)
+            {
+                res.StatuCode = sum;
+                res.Message = "修改成功";
+                return res;
+            }
+            else if (sum == 405)
+            {
+                res.StatuCode = sum;
+                res.Message = "修改失败，请联系工作人员";
+                return res;
+            }
+            else
+            {
+                res.StatuCode = sum;
+                res.Message = "不存在该条数据";
+                return res;
+            }
+        }
+        /// <summary>
+        /// 删除订单信息
+        /// </summary>
+        public Response_DTO<string> DeleteOrder(string orderNumber)
+        {
+            Response_DTO<string> res = new Response_DTO<string>();
+            if (string.IsNullOrEmpty(orderNumber))
+            {
+                res.StatuCode = 405;
+                res.Message = "请输入订单编号";
+                return res;
+            }
+            int sum = orderDAL.DeleteOrder(orderNumber);
+            if (sum == 200)
+            {
+                res.StatuCode = sum;
+                res.Message = "删除成功";
+                return res;
+            }
+            else if (sum == 405)
+            {
+                res.StatuCode = sum;
+                res.Message = "删除失败，请联系工作人员";
+                return res;
+            }
+            else
+            {
+                res.StatuCode = sum;
+                res.Message = "不存在该条数据";
+                return res;
+            }
+        }
     }
 }

@@ -61,11 +61,57 @@ namespace PetHomeDAL
         /// <summary>
         /// 修改订单信息
         /// </summary>
-        public void UpdataOrder(OrderUpdata_DTO model)
+        public int UpdataOrder(OrderUpdata_DTO model)
         {
             using (PetHomeDbContext con = new PetHomeDbContext())
             {
-                Order order = con.Orders.Find();
+                Order order = con.Orders.Find(model.OrderNumber);
+                if (order != null)
+                {
+                    order.OrderSite = model.OrderSite;
+                    order.OrderState = model.OrderState;
+                    con.Update(order);
+                    int count = con.SaveChanges();
+                    if (count > 0)
+                    {
+                        return 200;
+                    }
+                    else
+                    {
+                        return 405;
+                    }
+                }
+                else
+                {
+                    return 503;
+                }
+            }
+        }
+        /// <summary>
+        /// 删除订单信息
+        /// </summary>
+        public int DeleteOrder(string orderNumber)
+        {
+            using (PetHomeDbContext con = new PetHomeDbContext())
+            {
+                Order order = con.Orders.Find(orderNumber);
+                if (order != null)
+                {
+                    con.Orders.Remove(order);
+                    int count = con.SaveChanges();
+                    if (count > 0)
+                    {
+                        return 200;
+                    }
+                    else
+                    {
+                        return 405;
+                    }
+                }
+                else
+                {
+                    return 503;
+                }
             }
         }
     }

@@ -79,6 +79,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PetHomeAPI.Controllers.AppointController",
+    "Method": "AddAppoint",
+    "RelativePath": "api/Appoint/AddAppoint",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Models.DTO.AppointAdd_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetHomeAPI.Controllers.AppointController",
+    "Method": "DeleteAppoint",
+    "RelativePath": "api/Appoint/DeleteAppoint",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetHomeAPI.Controllers.AppointController",
+    "Method": "GetAppoint",
+    "RelativePath": "api/Appoint/GetAppoint",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "limit",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetHomeAPI.Controllers.AppointController",
+    "Method": "UpdataAppoint",
+    "RelativePath": "api/Appoint/UpdataAppoint",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "astate",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PetHomeAPI.Controllers.CommodityController",
     "Method": "AddCommdity",
     "RelativePath": "api/Commodity/AddCommdity",
@@ -154,6 +228,101 @@
         "Name": "model",
         "Type": "Models.DTO.OrderAdd_DTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetHomeAPI.Controllers.OrderController",
+    "Method": "DeleteOrder",
+    "RelativePath": "api/Order/DeleteOrder",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetHomeAPI.Controllers.OrderController",
+    "Method": "UpdataOrder",
+    "RelativePath": "api/Order/UpdataOrder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Models.DTO.OrderUpdata_DTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetHomeAPI.Controllers.OrderTypeController",
+    "Method": "AddOrderType",
+    "RelativePath": "api/OrderType/AddOrderType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetHomeAPI.Controllers.OrderTypeController",
+    "Method": "GetOrderType",
+    "RelativePath": "api/OrderType/GetOrderType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetHomeAPI.Controllers.OrderTypeController",
+    "Method": "UpdataOrderType",
+    "RelativePath": "api/OrderType/UpdataOrderType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Sid",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetHomeAPI.Controllers.OrderTypeController",
+    "Method": "UpdataOrderType",
+    "RelativePath": "api/OrderType/UpdataOrderType",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Sid",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

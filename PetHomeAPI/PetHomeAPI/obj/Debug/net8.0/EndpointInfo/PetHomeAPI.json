@@ -133,6 +133,119 @@
         }
       }
     },
+    "/api/Appoint/GetAppoint": {
+      "get": {
+        "tags": [
+          "Appoint"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appoint/AddAppoint": {
+      "post": {
+        "tags": [
+          "Appoint"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppointAdd_DTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppointAdd_DTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppointAdd_DTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appoint/UpdataAppoint": {
+      "post": {
+        "tags": [
+          "Appoint"
+        ],
+        "parameters": [
+          {
+            "name": "aid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "astate",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appoint/DeleteAppoint": {
+      "delete": {
+        "tags": [
+          "Appoint"
+        ],
+        "parameters": [
+          {
+            "name": "aid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Commodity/AddCommdity": {
       "post": {
         "tags": [
@@ -278,6 +391,140 @@
           }
         }
       }
+    },
+    "/api/Order/UpdataOrder": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderUpdata_DTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderUpdata_DTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderUpdata_DTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Order/DeleteOrder": {
+      "delete": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "orderNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/OrderType/GetOrderType": {
+      "get": {
+        "tags": [
+          "OrderType"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/OrderType/AddOrderType": {
+      "post": {
+        "tags": [
+          "OrderType"
+        ],
+        "parameters": [
+          {
+            "name": "SType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/OrderType/UpdataOrderType": {
+      "post": {
+        "tags": [
+          "OrderType"
+        ],
+        "parameters": [
+          {
+            "name": "Sid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "OrderType"
+        ],
+        "parameters": [
+          {
+            "name": "Sid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -318,6 +565,32 @@
             "nullable": true
           },
           "admins": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AppointAdd_DTO": {
+        "type": "object",
+        "properties": {
+          "auid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "astate": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "atime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "atype": {
             "type": "integer",
             "format": "int32"
           }
@@ -498,6 +771,24 @@
           "orderTime": {
             "type": "string",
             "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderUpdata_DTO": {
+        "type": "object",
+        "properties": {
+          "orderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "orderSite": {
+            "type": "string",
+            "nullable": true
+          },
+          "orderState": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

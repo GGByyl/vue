@@ -14,7 +14,7 @@ namespace Models.DTO
         /// <summary>
         /// 订单编号
         /// </summary>
-        public int OrderId { get; set; }
+        public string OrderNumber { get; set; }
         /// <summary>
         /// 收货地址
         /// </summary>
