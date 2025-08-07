@@ -94,3 +94,7 @@ C:\Users\GGB\Source\Repos\vue\PetHomeAPI\PetHomeAPI\bin\Debug\net8.0\PetHomeDAL.
 C:\Users\GGB\Source\Repos\vue\PetHomeAPI\PetHomeAPI\bin\Debug\net8.0\Models.pdb
 C:\Users\GGB\Source\Repos\vue\PetHomeAPI\PetHomeAPI\bin\Debug\net8.0\PetHomeBLL.pdb
 C:\Users\GGB\Source\Repos\vue\PetHomeAPI\PetHomeAPI\bin\Debug\net8.0\PetHomeDAL.pdb
+C:\Users\GGB\Source\Repos\vue\PetHomeAPI\PetHomeAPI\bin\Debug\net8.0\PetHomeAPI.xml
+C:\Users\GGB\Source\Repos\vue\PetHomeAPI\PetHomeAPI\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\GGB\Source\Repos\vue\PetHomeAPI\PetHomeAPI\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\GGB\Source\Repos\vue\PetHomeAPI\PetHomeAPI\bin\Debug\net8.0\System.IO.Packaging.dll

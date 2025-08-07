@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PetHomeAPI</name>
+    </assembly>
+    <members>
+        <member name="M:PetHomeAPI.Controllers.AccountController.GetAcc(Models.DTO.Account_DTO)">
+            <summary>
+            获取用户表
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.AccountController.Add_Account(Models.DTO.AddAccount_DTO)">
+            <summary>
+            注册 =》添加用户表
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.AccountController.AccountModify(Models.DTO.ModifyAccount_DTO)">
+            <summary>
+            修改用户                        
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.AccountController.AccountDelete(System.Int32)">
+            <summary>
+            删除用户
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.AppointController.GetAppoint">
+            <summary>
+            查询预约表
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.AppointController.AddAppoint(Models.DTO.AppointAdd_DTO)">
+            <summary>
+            添加预约
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.AppointController.UpdataAppoint(System.Int32,System.Int32)">
+            <summary>
+            修改预约
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.AppointController.DeleteAppoint(System.Int32)">
+            <summary>
+            删除预约
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.CommodityController.AddCommdity(Models.DTO.CommodityAdd_DTO)">
+            <summary>
+            添加商品信息
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.CommodityController.UpdataCommdity(Models.DTO.CommodityUpdata_DTO)">
+            <summary>
+            修改商品信息
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.CommodityController.DeleteCommodity(System.Int32)">
+            <summary>
+            删除商品信息
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.LoginController.Login(Models.DTO.Login_DTO)">
+            <summary>
+            登录
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.OrderController.AddOrder(Models.DTO.OrderAdd_DTO)">
+            <summary>
+            添加订单信息
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.OrderController.UpdataOrder(Models.DTO.OrderUpdata_DTO)">
+            <summary>
+            修改订单信息
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.OrderController.DeleteOrder(System.String)">
+            <summary>
+            删除订单信息
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.OrderTypeController.GetOrderType">
+            <summary>
+            查询订单状态
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.OrderTypeController.AddOrderType(System.String)">
+            <summary>
+            添加订单状态
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.OrderTypeController.UpdataOrderType(System.Nullable{System.Int32},System.String)">
+            <summary>
+            修改订单状态
+            </summary>
+        </member>
+        <member name="M:PetHomeAPI.Controllers.OrderTypeController.UpdataOrderType(System.Nullable{System.Int32})">
+            <summary>
+            删除订单状态
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -2,7 +2,8 @@
   "openapi": "3.0.1",
   "info": {
     "title": "PetHomeAPI",
-    "version": "1.0"
+    "description": "A simple example ASP.NET Core Web API",
+    "version": "v1"
   },
   "paths": {
     "/api/Account/GetAcc": {
@@ -10,6 +11,7 @@
         "tags": [
           "Account"
         ],
+        "summary": "获取用户表",
         "parameters": [
           {
             "name": "Number",
@@ -54,6 +56,7 @@
         "tags": [
           "Account"
         ],
+        "summary": "注册 =》添加用户表",
         "requestBody": {
           "content": {
             "application/json": {
@@ -85,6 +88,7 @@
         "tags": [
           "Account"
         ],
+        "summary": "修改用户",
         "requestBody": {
           "content": {
             "application/json": {
@@ -116,6 +120,7 @@
         "tags": [
           "Account"
         ],
+        "summary": "删除用户",
         "parameters": [
           {
             "name": "Aid",
@@ -138,24 +143,7 @@
         "tags": [
           "Appoint"
         ],
-        "parameters": [
-          {
-            "name": "page",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
+        "summary": "查询预约表",
         "responses": {
           "200": {
             "description": "OK"
@@ -168,6 +156,7 @@
         "tags": [
           "Appoint"
         ],
+        "summary": "添加预约",
         "requestBody": {
           "content": {
             "application/json": {
@@ -199,6 +188,7 @@
         "tags": [
           "Appoint"
         ],
+        "summary": "修改预约",
         "parameters": [
           {
             "name": "aid",
@@ -229,6 +219,7 @@
         "tags": [
           "Appoint"
         ],
+        "summary": "删除预约",
         "parameters": [
           {
             "name": "aid",
@@ -251,6 +242,7 @@
         "tags": [
           "Commodity"
         ],
+        "summary": "添加商品信息",
         "requestBody": {
           "content": {
             "application/json": {
@@ -282,6 +274,7 @@
         "tags": [
           "Commodity"
         ],
+        "summary": "修改商品信息",
         "requestBody": {
           "content": {
             "application/json": {
@@ -313,6 +306,7 @@
         "tags": [
           "Commodity"
         ],
+        "summary": "删除商品信息",
         "parameters": [
           {
             "name": "cid",
@@ -335,6 +329,7 @@
         "tags": [
           "Login"
         ],
+        "summary": "登录",
         "requestBody": {
           "content": {
             "application/json": {
@@ -366,6 +361,7 @@
         "tags": [
           "Order"
         ],
+        "summary": "添加订单信息",
         "requestBody": {
           "content": {
             "application/json": {
@@ -397,6 +393,7 @@
         "tags": [
           "Order"
         ],
+        "summary": "修改订单信息",
         "requestBody": {
           "content": {
             "application/json": {
@@ -428,6 +425,7 @@
         "tags": [
           "Order"
         ],
+        "summary": "删除订单信息",
         "parameters": [
           {
             "name": "orderNumber",
@@ -449,6 +447,7 @@
         "tags": [
           "OrderType"
         ],
+        "summary": "查询订单状态",
         "responses": {
           "200": {
             "description": "OK"
@@ -461,6 +460,7 @@
         "tags": [
           "OrderType"
         ],
+        "summary": "添加订单状态",
         "parameters": [
           {
             "name": "SType",
@@ -482,6 +482,7 @@
         "tags": [
           "OrderType"
         ],
+        "summary": "修改订单状态",
         "parameters": [
           {
             "name": "Sid",
@@ -509,6 +510,7 @@
         "tags": [
           "OrderType"
         ],
+        "summary": "删除订单状态",
         "parameters": [
           {
             "name": "Sid",

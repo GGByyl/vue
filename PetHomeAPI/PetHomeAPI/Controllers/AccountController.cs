@@ -27,7 +27,7 @@ namespace PetHomeAPI.Controllers
             });
         }
         /// <summary>
-        /// 注册
+        /// 注册 =》添加用户表
         /// </summary>
         [HttpPost]
         public IActionResult Add_Account([FromBody] AddAccount_DTO model)

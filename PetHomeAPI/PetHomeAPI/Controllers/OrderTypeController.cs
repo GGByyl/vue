@@ -12,7 +12,7 @@ namespace PetHomeAPI.Controllers
     {
         OrderTypeService orderTypeService = new OrderTypeService();
         /// <summary>
-        /// 查询
+        /// 查询订单状态
         /// </summary>
         [HttpGet]
         public IActionResult GetOrderType()
@@ -25,7 +25,7 @@ namespace PetHomeAPI.Controllers
             });
         }
         /// <summary>
-        /// 添加
+        /// 添加订单状态
         /// </summary>
         [HttpPost]
         public IActionResult AddOrderType(string? SType)
@@ -38,7 +38,7 @@ namespace PetHomeAPI.Controllers
             });
         }
         /// <summary>
-        /// 修改
+        /// 修改订单状态
         /// </summary>
         [HttpPost]
         public IActionResult UpdataOrderType(int? Sid, string? SType)
@@ -51,7 +51,7 @@ namespace PetHomeAPI.Controllers
             });
         }
         /// <summary>
-        /// 删除
+        /// 删除订单状态
         /// </summary>
         [HttpDelete]
         public IActionResult UpdataOrderType(int? Sid)

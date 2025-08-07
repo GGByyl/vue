@@ -12,22 +12,24 @@ namespace PetHomeAPI.Controllers
     {
         AppointService appointService = new AppointService();
         /// <summary>
-        /// 查询
+        /// 查询预约表
         /// </summary>
         [HttpGet]
-        public IActionResult GetAppoint([FromQuery] AppointGet_DTO model)
+        public IActionResult GetAppoint()//[FromQuery] AppointGet_DTO model)
         {
-            int TotalCount;
-            Response_DTO<List<Appoint_DTO>> res = appointService.GetAppoint(model, out TotalCount);
+            //int TotalCount;
+            //Response_DTO<List<Appoint_DTO>> res = appointService.GetAppoint(model, out TotalCount);
             return new JsonResult(new
             {
-                stu = res.StatuCode,
-                user = res.Conten,
-                msg = res.Message
+                V =
+                /*stu = res.StatuCode,
+user = res.Conten,
+msg = res.Message*/
+                Path.GetDirectoryName(typeof(Program).Assembly.Location)
             });
         }
         /// <summary>
-        /// 添加
+        /// 添加预约
         /// </summary>
         [HttpPost]
         public IActionResult AddAppoint(AppointAdd_DTO model)
@@ -40,7 +42,7 @@ namespace PetHomeAPI.Controllers
             });
         }
         /// <summary>
-        /// 修改
+        /// 修改预约
         /// </summary>
         [HttpPost]
         public IActionResult UpdataAppoint(int aid, int astate)
@@ -53,7 +55,7 @@ namespace PetHomeAPI.Controllers
             });
         }
         /// <summary>
-        /// 删除
+        /// 删除预约
         /// </summary>
         [HttpDelete]
         public IActionResult DeleteAppoint(int aid)

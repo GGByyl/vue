@@ -14,7 +14,7 @@ namespace PetHomeBLL
         AccountDAL accountDAL = new AccountDAL();
 
         /// <summary>
-        /// 登录
+        /// 用户登录
         /// </summary>
         public Response_DTO<Account> GetAccountLogin(Login_DTO model)
         {
@@ -74,22 +74,10 @@ namespace PetHomeBLL
                 return res;
 
             }
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
         /// <summary>
-        /// 注册
+        /// 用户注册
         /// </summary>
         public Response_DTO<Account> Add_Account(AddAccount_DTO model)
         {
